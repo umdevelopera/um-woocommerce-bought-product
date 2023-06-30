@@ -1,0 +1,60 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate Member - WooCommerce (bought product)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-30 12:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.3-beta2\n"
+"X-Domain: um-woocommerce-bought-product"
+
+#. Description of the plugin
+msgid "Adds the \"Bought products\" field and filter."
+msgstr ""
+
+#: includes/core/class-fields.php:55 includes/core/class-fields.php:56
+#: includes/core/class-member-directory.php:38
+msgid "Bought products"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/umdevelopera"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/umdevelopera/um-woocommerce-bought-product"
+msgstr ""
+
+#. %s - plugin name.
+#: um-woocommerce-bought-product.php:58
+#, php-format
+msgid ""
+"The <strong>%s</strong> extension requires the Ultimate Member plugin to be "
+"activated to work properly. You can download it <a href=\"https://wordpress."
+"org/plugins/ultimate-member\">here</a>"
+msgstr ""
+
+#. %s - plugin name.
+#: um-woocommerce-bought-product.php:67
+#, php-format
+msgid ""
+"The <strong>%s</strong> extension requires WooCommerce plugin to be "
+"activated to work properly. You can download it <a href=\"https://wordpress."
+"org/plugins/woocommerce/\">here</a>"
+msgstr ""
+
+#. Name of the plugin
+msgid "Ultimate Member - WooCommerce (bought product)"
+msgstr ""
+
+#. Author of the plugin
+msgid "Ultimate Member support"
+msgstr ""
