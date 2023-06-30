@@ -31,16 +31,16 @@ Go to *wp-admin > Ultimate Member > Member Directories > Edit* to add the **Boug
 ### Screenshots:
 
 Image - How to add a field to the Profile form.
-![um-woocommerce-bought-product 01-1](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/664db7c6-7115-40b3-8944-a929f9c39fe0)
+![um-woocommerce-bought-product 01-1](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/7e2bbbb0-0204-4562-9e43-44b856da4b04)
 
 Image - The "Bought products" field in the Profile form.
-![um-woocommerce-bought-product 01-2](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/aa3a7dec-efc6-486d-a542-9f9763be15ca)
+![um-woocommerce-bought-product 01-2](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/f758821f-e64b-4586-b6a6-6473d65ba302)
 
 Image - How to add a filter to the Member Directory.
-![um-woocommerce-bought-product 02-1](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/236e0dcd-d991-4fc4-bbaa-3dee8cb0d8dd)
+![um-woocommerce-bought-product 02-1](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/0ca53adc-6a2f-4202-b195-b478f8c41baf)
 
 Image - The "Bought products" filter in the Member Directory.
-![um-woocommerce-bought-product 02-2](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/1489d2f5-2b11-4924-b9ac-90e59ec88e0f)
+![um-woocommerce-bought-product 02-2](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/77bb7790-1d73-424d-941f-0c8bc7cba290)
 
 ## Related links:
 Ultimate Member home page: https://ultimatemember.com/
