@@ -6,8 +6,8 @@ __Note:__ This is a free extension created for the community. The Ultimate Membe
 ## Key features
 - Adds the "Bought products" field to the form builder.
 - Adds the "Bought products" filter to the member directory.
-- Updates the 'woo_bought_products' user meta on the plugin activation.
-- Updates the 'woo_bought_products' user meta on the order status change.
+- Updates the `woo_bought_products` user meta on the plugin activation.
+- Updates the `woo_bought_products` user meta on the order status change.
 
 ## Installation
 
@@ -24,15 +24,23 @@ Once the plugin is cloned, enter your site admin dashboard and go to _wp-admin >
 You can install this plugin from the [ZIP archive](https://drive.google.com/file/d/1JkfjmQhLNw-_sM_Xt-LTtS7GJ7kv9WCZ/view?usp=sharing) as any other plugin. Follow [this instruction](https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin).
 
 ## How to use
-Go to *wp-admin > Ultimate Member > Forms > Default Profile* to add the "Bought products" field to profiles. Click the "+" icon in the Form Builder. You will see the Fields Manager pop-up. Click the "Bought products" button. A field will be added to the form. Click the Update button to save the changes. See details [here](https://docs.ultimatemember.com/article/188-how-to-add-fields-to-a-form).
+Go to *wp-admin > Ultimate Member > Forms > Default Profile* to add the **Bought products** field to profiles. Click the "+" icon in the **Form Builder**. You will see the **Fields Manager** pop-up. Click the **Bought products** button. A field will be added to the form. Click the **Update** button to save changes. See details [here](https://docs.ultimatemember.com/article/188-how-to-add-fields-to-a-form).
 
-Go to *wp-admin > Ultimate Member > Member Directories > Edit* to add the "Bought products" filter to the member directory. Scroll down to the Search Options section. Turn on the "Enable Filters feature" setting and you will see the "Choose filter(s) meta to enable" setting below. Click the "Add New Custom Field" button to add a new filter. Choose the "Bought products" in the field that appears. Click the Update button to save the changes. See details [here](https://docs.ultimatemember.com/article/1513-member-directories-2-1-0#search).
+Go to *wp-admin > Ultimate Member > Member Directories > Edit* to add the **Bought products** filter to the member directory. Scroll down to the **Search Options** section. Turn on the **Enable Filters feature** setting and you will see the **Choose filter(s) meta to enable** setting below. Click the **Add New Custom Field** button to add a new filter. Choose the **Bought products** in the field that appears. Click the **Update** button to save the changes. See details [here](https://docs.ultimatemember.com/article/1513-member-directories-2-1-0#search).
 
 ### Screenshots:
 
 Image - How to add a field to the Profile form.
+![um-woocommerce-bought-product 01-1](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/7e2bbbb0-0204-4562-9e43-44b856da4b04)
+
+Image - The "Bought products" field in the Profile form.
+![um-woocommerce-bought-product 01-2](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/f758821f-e64b-4586-b6a6-6473d65ba302)
 
 Image - How to add a filter to the Member Directory.
+![um-woocommerce-bought-product 02-1](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/0ca53adc-6a2f-4202-b195-b478f8c41baf)
+
+Image - The "Bought products" filter in the Member Directory.
+![um-woocommerce-bought-product 02-2](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/77bb7790-1d73-424d-941f-0c8bc7cba290)
 
 ## Related links:
 Ultimate Member home page: https://ultimatemember.com/
