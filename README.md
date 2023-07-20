@@ -21,7 +21,7 @@ Open git bash, navigate to the **plugins** folder and execute this command:
 Once the plugin is cloned, enter your site admin dashboard and go to _wp-admin > Plugins > Installed Plugins_. Find the "Ultimate Member - WooCommerce (bought products)" plugin and click the "Activate" link.
 
 ### Install from ZIP archive
-You can install this plugin from the [ZIP archive](https://drive.google.com/file/d/1JkfjmQhLNw-_sM_Xt-LTtS7GJ7kv9WCZ/view?usp=sharing) as any other plugin. Follow [this instruction](https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin).
+You can install this plugin from the [ZIP archive](https://drive.google.com/file/d/18f2bjz-hPPdf82kvLrnCZ_kBN2kvZXjE/view?usp=sharing) as any other plugin. Follow [this instruction](https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin).
 
 ## How to use
 Go to *wp-admin > Ultimate Member > Forms > Default Profile* to add the **Bought products** field to profiles. Click the "+" icon in the **Form Builder**. You will see the **Fields Manager** pop-up. Click the **Bought products** button. A field will be added to the form. Click the **Update** button to save changes. See details [here](https://docs.ultimatemember.com/article/188-how-to-add-fields-to-a-form).
@@ -41,6 +41,12 @@ Image - How to add a filter to the Member Directory.
 
 Image - The "Bought products" filter in the Member Directory.
 ![um-woocommerce-bought-product 02-2](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/77bb7790-1d73-424d-941f-0c8bc7cba290)
+
+### Hooks:
+
+**um_woocommerce_bought_product_can_view_field** - allows displaying the "Bought products" filter for everyone.
+Example:
+`add_filter( 'um_woocommerce_bought_product_can_view_field', '__return_true', 10, 1 );`
 
 ## Related links:
 Ultimate Member home page: https://ultimatemember.com/
