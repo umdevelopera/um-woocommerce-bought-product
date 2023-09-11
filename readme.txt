@@ -4,11 +4,11 @@ Author URI: https://github.com/umdevelopera
 Plugin URI: https://github.com/umdevelopera/um-woocommerce-bought-product
 Tags: ultimate member, bought product, field, filter
 Requires at least: 6.0
-Tested up to: 6.2.2
-Stable tag: 1.0.0
+Tested up to: 6.3.1
+Stable tag: 1.1.0
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
-Requires UM core at least: 2.5.0
+Requires UM core at least: 2.6.8
 
 == Description ==
 
@@ -30,6 +30,10 @@ You can install this plugin from the ZIP file as any other plugin. Follow this i
 This is a free extension created for the community. The Ultimate Member team does not provide any support for this extension. Open new issue in the GitHub repository if you face a problem: https://github.com/umdevelopera/um-woocommerce-bought-product/issues
 
 == Changelog ==
+
+= 1.1.0: September 12, 2023 =
+
+* Added: Dashboard widget with a tool "Create or update bought products usermeta"
 
 = 1.0.1: July 20, 2023 =
 
