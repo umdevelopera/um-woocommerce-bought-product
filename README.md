@@ -4,10 +4,10 @@ Adds the "Bought products" field and filter.
 __Note:__ This is a free extension created for the community. The Ultimate Member team does not provide any support for this extension.
 
 ## Key features
-- Adds the "Bought products" field to the form builder.
-- Adds the "Bought products" filter to the member directory.
-- Updates the `woo_bought_products` user meta on the plugin activation.
-- Updates the `woo_bought_products` user meta on the order status change.
+- Add the "Bought products" field to the form builder.
+- Add the "Bought products" filter to the member directory.
+- Update the `woo_bought_products` user meta automatically on the plugin activation.
+- Update the `woo_bought_products` user meta manually using the dashboard widget.
 
 ## Installation
 
