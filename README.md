@@ -24,7 +24,7 @@ Once the plugin is cloned, enter your site admin dashboard and go to _wp-admin >
 You can install this plugin from the [ZIP archive](https://drive.google.com/file/d/1qC0x_TV-Z9G20RPmuUsrSETej9gYY9Iy/view?usp=sharing) as any other plugin. Follow [this instruction](https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin).
 
 ## How to use
-Go to *wp-admin > Ultimate Member > Dashboard* to updates information about purchased products for members. Find the **WooCommerce (bought products)** widget and click the **Start** button to run the process. You'll see a progress bar below. Wait until the process will be done.
+Go to *wp-admin > Ultimate Member > Dashboard* to update information about purchased products for members. Find the **WooCommerce (bought products)** widget and click the **Start** button to run the process. You'll see a progress bar below. Wait until the process will be done.
 
 Go to *wp-admin > Ultimate Member > Forms > Default Profile* to add the **Bought products** field to profiles. Click the "+" icon in the **Form Builder**. You will see the **Fields Manager** pop-up. Click the **Bought products** button. A field will be added to the form. Click the **Update** button to save changes. See details [here](https://docs.ultimatemember.com/article/188-how-to-add-fields-to-a-form).
 
@@ -33,10 +33,10 @@ Go to *wp-admin > Ultimate Member > Member Directories > Edit* to add the **Boug
 ### Screenshots:
 
 Image - How to updates information about purchased products for members.
-
+![UM Dashboard](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/d6aacb52-03eb-4f1c-a9bd-07b773d64b6a)
 
 Image - Update purchased products process.
-
+![UM Dashboard + Update purchased products process](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/b23bda7c-1312-485e-84b2-1e96cd9211b9)
 
 Image - How to add a field to the Profile form.
 ![um-woocommerce-bought-product 01-1](https://github.com/umdevelopera/um-woocommerce-bought-product/assets/113178913/7e2bbbb0-0204-4562-9e43-44b856da4b04)
