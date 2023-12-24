@@ -22,7 +22,7 @@ class Dashboard {
 	 *
 	 * @var int
 	 */
-	protected $users_per_once = 3;
+	protected $users_per_once = 100;
 
 	/**
 	 * Products IDs.
@@ -209,7 +209,7 @@ class Dashboard {
 	 * Load metabox
 	 */
 	public function load_metabox() {
-		add_meta_box( 'um-metaboxes-wcbp', __( 'WooCommerce (bought products)', 'um-woocommerce-bought-product' ), array( &$this, 'metabox_content' ), 'toplevel_page_ultimatemember', 'normal', 'default' );
+		add_meta_box( 'um-metaboxes-wcbp', __( 'Bought products', 'um-woocommerce-bought-product' ), array( &$this, 'metabox_content' ), 'toplevel_page_ultimatemember', 'normal', 'default' );
 	}
 
 

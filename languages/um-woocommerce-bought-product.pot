@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member - WooCommerce (bought product)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 22:17+0000\n"
+"POT-Creation-Date: 2023-12-24 12:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -17,11 +17,13 @@ msgstr ""
 "X-Domain: um-woocommerce-bought-product"
 
 #. Description of the plugin
-msgid "Adds the \"Bought products\" field and filter."
+msgid ""
+"Adds the \"Bought products\" field and filter based on WooCommerce orders."
 msgstr ""
 
-#: includes/core/class-fields.php:55 includes/core/class-fields.php:56
-#: includes/core/class-member-directory.php:81
+#: includes/admin/class-dashboard.php:212 includes/core/class-fields.php:74
+#: includes/core/class-fields.php:75
+#: includes/core/class-member-directory.php:91
 msgid "Bought products"
 msgstr ""
 
@@ -76,7 +78,7 @@ msgid "Start"
 msgstr ""
 
 #. %s - plugin name.
-#: um-woocommerce-bought-product.php:58
+#: um-woocommerce-bought-product.php:60
 #, php-format
 msgid ""
 "The <strong>%s</strong> extension requires the Ultimate Member plugin to be "
@@ -85,7 +87,7 @@ msgid ""
 msgstr ""
 
 #. %s - plugin name.
-#: um-woocommerce-bought-product.php:67
+#: um-woocommerce-bought-product.php:69
 #, php-format
 msgid ""
 "The <strong>%s</strong> extension requires WooCommerce plugin to be "
@@ -104,7 +106,7 @@ msgid ""
 msgstr ""
 
 #. Name of the plugin
-msgid "Ultimate Member - WooCommerce (bought products)"
+msgid "Ultimate Member - Bought products"
 msgstr ""
 
 #. Author of the plugin
@@ -113,10 +115,6 @@ msgstr ""
 
 #: includes/admin/class-dashboard.php:129
 msgid "User meta are updating. Progress "
-msgstr ""
-
-#: includes/admin/class-dashboard.php:212
-msgid "WooCommerce (bought products)"
 msgstr ""
 
 #: includes/admin/templates/dashboard.php:20
