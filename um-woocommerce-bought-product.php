@@ -2,18 +2,18 @@
 /**
  * Plugin Name: Ultimate Member - Bought products
  * Plugin URI:  https://github.com/umdevelopera/um-woocommerce-bought-product
- * Description: Adds the "Bought products" field and filter based on WooCommerce orders.
+ * Description: Adds the "Bought products" field and filter based on WooCommerce orders
  * Author:      umdevelopera
  * Author URI:  https://github.com/umdevelopera
  * Text Domain: um-woocommerce-bought-product
  * Domain Path: /languages
  *
- * Version: 1.2.0
- * UM version: 2.8.1
- * Requires at least: 5.5
- * Requires PHP: 5.6
+ * Requires at least: 6.5
+ * Requires PHP: 7.4
+ * UM version: 2.9.0
+ * Version: 1.2.1
  *
- * @package UM Tools
+ * @package um_ext\um_woocommerce_bought_product
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
-$plugin_data = get_plugin_data( __FILE__ );
+$plugin_data = get_plugin_data( __FILE__, true, false );
 
 define( 'um_woocommerce_bought_product_url', plugin_dir_url( __FILE__ ) );
 define( 'um_woocommerce_bought_product_path', plugin_dir_path( __FILE__ ) );
@@ -30,7 +30,6 @@ define( 'um_woocommerce_bought_product_plugin', plugin_basename( __FILE__ ) );
 define( 'um_woocommerce_bought_product_extension', $plugin_data['Name'] );
 define( 'um_woocommerce_bought_product_version', $plugin_data['Version'] );
 define( 'um_woocommerce_bought_product_textdomain', 'um-woocommerce-bought-product' );
-define( 'um_woocommerce_bought_product_requires', '2.7.0' );
 
 
 // Activation script.
