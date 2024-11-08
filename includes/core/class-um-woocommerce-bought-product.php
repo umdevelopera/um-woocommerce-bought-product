@@ -40,13 +40,10 @@ class UM_Woocommerce_Bought_Product {
 	 * UM_Woocommerce_Bought_Product constructor.
 	 */
 	public function __construct() {
-		
 		$this->dashboard();
 		$this->fields();
 		$this->member_directory();
 		$this->order();
-
-		add_action( 'plugins_loaded', array( $this, 'textdomain' ), 9 );
 	}
 
 
@@ -99,16 +96,6 @@ class UM_Woocommerce_Bought_Product {
 			UM()->classes['um_woocommerce_bought_product_order'] = new um_ext\um_woocommerce_bought_product\core\Order();
 		}
 		return UM()->classes['um_woocommerce_bought_product_order'];
-	}
-
-
-	/**
-	 * Loads a plugin's translated strings.
-	 */
-	public function textdomain() {
-		$locale = get_locale() ? get_locale() : 'en_US';
-		load_textdomain( um_woocommerce_bought_product_textdomain, WP_LANG_DIR . '/plugins/' . um_woocommerce_bought_product_textdomain . '-' . $locale . '.mo' );
-		load_plugin_textdomain( um_woocommerce_bought_product_textdomain, false, dirname( um_woocommerce_bought_product_plugin ) . '/languages/' );
 	}
 
 }
