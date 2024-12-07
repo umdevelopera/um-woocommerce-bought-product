@@ -56,16 +56,11 @@ class Fields {
 	public function extend_predefined_fields( $fields ) {
 
 		if (
-			isset( $_POST['nonce'] )
-			&& isset( $_POST['action'] )
-			&& isset( $_POST['act_id'] )
-			&& isset( $_POST['form_mode'] )
-			&& wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'um-admin-nonce' )
-			&& 'um_dynamic_modal_content' === wp_unslash( sanitize_key( $_POST['action'] ) )
-			&& 'um_admin_show_fields' === wp_unslash( sanitize_key( $_POST['act_id'] ) )
-			&& 'profile' !== wp_unslash( sanitize_key( $_POST['form_mode'] ) )
+			isset( $_POST['action'] ) && 'um_dynamic_modal_content' === wp_unslash( sanitize_key( $_POST['action'] ) )
+			&& isset( $_POST['act_id'] ) && 'um_admin_show_fields' === wp_unslash( sanitize_key( $_POST['act_id'] ) )
+			&& isset( $_POST['form_mode'] ) && 'profile' !== wp_unslash( sanitize_key( $_POST['form_mode'] ) )
 		) {
-			// This field is specific tor the profile form and can be added to the registration form.
+			// This field is specific tor the profile form and can be added to other forms.
 			return $fields;
 		}
 
@@ -79,7 +74,7 @@ class Fields {
 			'visibility' => 'view',
 			'required'   => 0,
 			'editable'   => 0,
-			'icon'       => 'um-faicon-shopping-cart',
+			'icon'       => 'fas fa-box-archive',
 		);
 
 		return $fields;

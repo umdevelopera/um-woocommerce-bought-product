@@ -8,10 +8,11 @@
  * Text Domain: um-woocommerce-bought-product
  * Domain Path: /languages
  *
+ * Requires Plugins: ultimate-member, woocommerce
  * Requires at least: 6.5
  * Requires PHP: 7.4
- * UM version: 2.9.0
- * Version: 1.2.1
+ * UM version: 2.9.2
+ * Version: 1.2.2
  *
  * @package um_ext\um_woocommerce_bought_product
  */
@@ -74,7 +75,7 @@ if ( ! function_exists( 'um_woocommerce_bought_product_check_dependencies' ) ) {
 		}
 	}
 }
-add_action( 'plugins_loaded', 'um_woocommerce_bought_product_check_dependencies', 2 );
+add_action( 'init', 'um_woocommerce_bought_product_check_dependencies', 0 );
 
 
 // Declaring extension compatibility.
