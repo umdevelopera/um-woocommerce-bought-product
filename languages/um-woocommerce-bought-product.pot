@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member - WooCommerce (bought product)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-24 12:07+0000\n"
+"POT-Creation-Date: 2024-12-07 19:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -18,12 +18,12 @@ msgstr ""
 
 #. Description of the plugin
 msgid ""
-"Adds the \"Bought products\" field and filter based on WooCommerce orders."
+"Adds the \"Bought products\" field and filter based on WooCommerce orders"
 msgstr ""
 
-#: includes/admin/class-dashboard.php:212 includes/core/class-fields.php:74
-#: includes/core/class-fields.php:75
-#: includes/core/class-member-directory.php:91
+#: includes/admin/class-dashboard.php:212 includes/core/class-fields.php:69
+#: includes/core/class-fields.php:70
+#: includes/core/class-member-directory.php:92
 msgid "Bought products"
 msgstr ""
 

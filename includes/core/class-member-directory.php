@@ -69,8 +69,9 @@ class Member_Directory {
 	 */
 	public function can_view_field( $can_view, $data ) {
 		if ( is_array( $data ) && array_key_exists( 'metakey', $data ) && 'woo_bought_products' === $data['metakey'] ) {
-			$can_edit = UM()->roles()->um_user_can( 'can_edit_everyone' );
-			$can_view = $can_edit || apply_filters( 'um_woocommerce_bought_product_can_view_field', false );
+			$can_view = ( $can_view && um_is_core_page( 'user' ) )
+				|| UM()->roles()->um_user_can( 'can_edit_everyone' )
+				|| apply_filters( 'um_woocommerce_bought_product_can_view_field', false );
 		}
 		return $can_view;
 	}
