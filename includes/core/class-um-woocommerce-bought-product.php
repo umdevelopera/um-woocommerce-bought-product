@@ -40,9 +40,25 @@ class UM_Woocommerce_Bought_Product {
 	 * UM_Woocommerce_Bought_Product constructor.
 	 */
 	public function __construct() {
+		if ( UM()->is_request( 'admin' ) ) {
+			$this->dashboard();
+		}
 		$this->fields();
 		$this->member_directory();
 		$this->order();
+	}
+
+
+	/**
+	 * Get instance of the class that extends Ultimate Member dashboard.
+	 *
+	 * @return um_ext\um_woocommerce_bought_product\admin\Dashboard()
+	 */
+	public function dashboard() {
+		if ( empty( UM()->classes['um_woocommerce_bought_product_dashboard'] ) ) {
+			UM()->classes['um_woocommerce_bought_product_dashboard'] = new um_ext\um_woocommerce_bought_product\admin\Dashboard();
+		}
+		return UM()->classes['um_woocommerce_bought_product_dashboard'];
 	}
 
 
