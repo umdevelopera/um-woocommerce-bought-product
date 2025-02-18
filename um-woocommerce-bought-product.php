@@ -3,12 +3,12 @@
 	Plugin Name: Ultimate Member - WooCommerce (bought products)
 	Plugin URI:  https://github.com/umdevelopera/um-woocommerce-bought-product
 	Description: Adds the "Bought products" field and filter.
-	Version:     1.0.0
+	Version:     1.0.1
 	Author:      umdevelopera
 	Author URI:  https://github.com/umdevelopera
 	Text Domain: um-woocommerce-bought-product
 	Domain Path: /languages
-	UM version:  2.6.0
+	UM version:  2.6.7
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,7 +25,7 @@ define( 'um_woocommerce_bought_product_plugin', plugin_basename( __FILE__ ) );
 define( 'um_woocommerce_bought_product_extension', $plugin_data['Name'] );
 define( 'um_woocommerce_bought_product_version', $plugin_data['Version'] );
 define( 'um_woocommerce_bought_product_textdomain', 'um-woocommerce-bought-product' );
-define( 'um_woocommerce_bought_product_requires', '2.6.0' );
+define( 'um_woocommerce_bought_product_requires', '2.6.7' );
 
 // Activation script.
 if ( ! function_exists( 'um_woocommerce_bought_product_activation_hook' ) ) {

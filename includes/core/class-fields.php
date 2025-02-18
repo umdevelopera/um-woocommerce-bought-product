@@ -93,8 +93,10 @@ class Fields {
 	 * @return int
 	 */
 	public function filter_use_keyword( $use_keyword, $data ) {
-		if ( 'woo_bought_products' === $data['metakey'] ) {
-			$use_keyword = 1;
+		if ( is_array( $data ) && array_key_exists( 'metakey', $data ) && 'woo_bought_products' === $data['metakey'] ) {
+			$use_keyword = true;
+		} elseif ( is_string( $data ) && 'woo_bought_products' === $data ) {
+			$use_keyword = true;
 		}
 		return $use_keyword;
 	}

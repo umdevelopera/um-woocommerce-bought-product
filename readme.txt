@@ -31,6 +31,11 @@ This is a free extension created for the community. The Ultimate Member team doe
 
 == Changelog ==
 
+= 1.0.1: July 20, 2023 =
+
+* Added: Filter 'um_woocommerce_bought_product_can_view_field' that allows displaying the "Bought products" filter for everyone.
+* Fixed: The core 2.6.7 version compatibility.
+
 = 1.0.0: June 30, 2023 =
 
 * Initial release.
