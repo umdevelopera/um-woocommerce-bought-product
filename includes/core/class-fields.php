@@ -1,20 +1,14 @@
 <?php
-/**
- * Extend predefined fields.
- *
- * @package um_ext\um_woocommerce_bought_product\core
- */
+namespace um_ext\um_woocommerce_tools\core;
 
-namespace um_ext\um_woocommerce_bought_product\core;
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Extend predefined fields.
  *
- * @package um_ext\um_woocommerce_bought_product\core
+ * Get an instance this way: UM()->Woocommerce_Tools()->core()->fields()
+ *
+ * @package um_ext\um_woocommerce_tools\core
  */
 class Fields {
 
@@ -24,7 +18,6 @@ class Fields {
 	 * @var array
 	 */
 	private $options;
-
 
 	/**
 	 * Class Fields constructor.
@@ -40,7 +33,6 @@ class Fields {
 		// Use keys in options.
 		add_filter( 'um_select_options_pair', array( $this, 'filter_use_keyword' ), 10, 2 );
 	}
-
 
 	/**
 	 * Add the "Bought products" field to the predefined fields array.
@@ -66,8 +58,8 @@ class Fields {
 
 		$fields['woo_bought_products'] = array(
 			'type'       => 'multiselect',
-			'title'      => __( 'Bought products', 'um-woocommerce-bought-product' ),
-			'label'      => __( 'Bought products', 'um-woocommerce-bought-product' ),
+			'title'      => __( 'Bought products', 'um-woocommerce-tools' ),
+			'label'      => __( 'Bought products', 'um-woocommerce-tools' ),
 			'metakey'    => 'woo_bought_products',
 			'options'    => $this->get_options(),
 			'public'     => -1,
@@ -79,7 +71,6 @@ class Fields {
 
 		return $fields;
 	}
-
 
 	/**
 	 * Filter the "Bought products" field data in the "view" mode.
@@ -97,7 +88,6 @@ class Fields {
 		}
 		return $data;
 	}
-
 
 	/**
 	 * Filter the "Bought products" field keyword flag.
@@ -119,7 +109,6 @@ class Fields {
 		}
 		return $use_keyword;
 	}
-
 
 	/**
 	 * Filter the "Bought products" field options.

@@ -1,33 +1,25 @@
 <?php
-/**
- * Extend predefined order.
- *
- * @package um_ext\um_woocommerce_bought_product\core
- */
-
-namespace um_ext\um_woocommerce_bought_product\core;
+namespace um_ext\um_woocommerce_tools\core;
 
 use Automattic\WooCommerce\Utilities\OrderUtil;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 /**
- * Extend predefined order.
+ * Extend order actions.
  *
- * @package um_ext\um_woocommerce_bought_product\core
+ * Get an instance this way: UM()->Woocommerce_Tools()->core()->order()
+ *
+ * @package um_ext\um_woocommerce_tools\core
  */
 class Order {
 
-
 	/**
-	 * Class Order constructor.
+	 * Class constructor.
 	 */
 	public function __construct() {
 		add_action( 'woocommerce_order_status_changed', array( $this, 'update_user_data' ), 10, 4 );
 	}
-
 
 	/**
 	 * Update user data.
@@ -74,10 +66,15 @@ WHERE p.post_type = 'shop_order'
 
 		$products = array();
 		foreach ( $results as $result ) {
-			$products[] = $result->product_id;
+			$products[] = (string) $result->product_id;
 		}
-		$woo_bought_products = array_unique( $products );
-		update_user_meta( $user_id, 'woo_bought_products', $woo_bought_products );
+
+		$bought_products = array_unique( $products );
+		if ( empty( $bought_products ) ) {
+			delete_user_meta( $user_id, 'woo_bought_products' );
+		} else {
+			update_user_meta( $user_id, 'woo_bought_products', $bought_products );
+		}
 	}
 
 }

@@ -1,4 +1,4 @@
-/* wp-admin styles for the "Ultimate Member - WooCommerce (bought products)" plugin. */
+/* wp-admin styles for the "Ultimate Member - WooCommerce Tools" plugin. */
 
 .um-wcbp-notice {
 	background: #fff;
@@ -15,7 +15,7 @@
 	border-color: #00a32a;
 }
 .um-wcbp-form .spinner {
-	float: none;
+	visibility: visible;
 }
 .um-wcbp-progress-bar{
 	background-color: #ECECEC;

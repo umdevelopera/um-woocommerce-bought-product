@@ -1,23 +1,16 @@
 <?php
-/**
- * Extend member directory filters.
- *
- * @package um_ext\um_woocommerce_bought_product\core
- */
+namespace um_ext\um_woocommerce_tools\core;
 
-namespace um_ext\um_woocommerce_bought_product\core;
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Extend member directory filters.
  *
- * @package um_ext\um_woocommerce_bought_product\core
+ * Get an instance this way: UM()->Woocommerce_Tools()->core()->member_directory()
+ *
+ * @package um_ext\um_woocommerce_tools\core
  */
 class Member_Directory {
-
 
 	/**
 	 * Class Member_Directory constructor.
@@ -34,7 +27,6 @@ class Member_Directory {
 		add_filter( 'um_members_directory_filter_types', array( $this, 'extend_filter_types' ), 10, 1 );
 	}
 
-
 	/**
 	 * Turn ON the "Bought products" filter.
 	 *
@@ -44,7 +36,6 @@ class Member_Directory {
 		add_filter( 'um_can_view_field', array( $this, 'can_view_field' ), 10, 2 );
 	}
 
-
 	/**
 	 * Turn OFF the "Bought products" filter.
 	 *
@@ -53,7 +44,6 @@ class Member_Directory {
 	public function can_view_field_off( $args ) {
 		remove_filter( 'um_can_view_field', array( $this, 'can_view_field' ), 10 );
 	}
-
 
 	/**
 	 * Show the "Bought products" filter regardless of the field privacy and visibility.
@@ -76,7 +66,6 @@ class Member_Directory {
 		return $can_view;
 	}
 
-
 	/**
 	 * Add the "Bought products" field to the member directory filters.
 	 *
@@ -89,10 +78,9 @@ class Member_Directory {
 	 * @return array
 	 */
 	public function extend_filter_fields( $filter_fields ) {
-		$filter_fields['woo_bought_products'] = __( 'Bought products', 'um-woocommerce-bought-product' );
+		$filter_fields['woo_bought_products'] = __( 'Bought products', 'um-woocommerce-tools' );
 		return $filter_fields;
 	}
-
 
 	/**
 	 * Set type for the "Bought products" filter.

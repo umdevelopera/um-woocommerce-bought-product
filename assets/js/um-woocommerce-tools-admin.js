@@ -1,4 +1,4 @@
-/* wp-admin scripts for the "Ultimate Member - WooCommerce (bought products)" plugin. */
+/* wp-admin scripts for the "Ultimate Member - WooCommerce Tools" plugin. */
 
 jQuery( function () {
 	var wcbp_data = window.um_wcbp_update || {};

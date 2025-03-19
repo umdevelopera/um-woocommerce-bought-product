@@ -1,32 +1,16 @@
 <?php
-/**
- * Sets default settings on installation.
- *
- * @package um_ext\um_woocommerce_bought_product\core
- */
-
-namespace um_ext\um_woocommerce_bought_product\core;
+namespace um_ext\um_woocommerce_tools\core;
 
 use Automattic\WooCommerce\Utilities\OrderUtil;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 /**
- * Class Setup
+ * Sets default settings on installation.
  *
- * @package um_ext\um_woocommerce_bought_product\core
+ * @package um_ext\um_woocommerce_tools\core
  */
 class Setup {
-
-
-	/**
-	 * Setup constructor.
-	 */
-	public function __construct() {
-	}
-
 
 	/**
 	 * Run on plugin activation.
@@ -35,12 +19,14 @@ class Setup {
 		$this->update_user_data();
 	}
 
-
 	/**
 	 * Update user data.
 	 */
 	public function update_user_data() {
 		global $wpdb;
+
+		// Delete old data.
+		$wpdb->query( "DELETE FROM {$wpdb->usermeta} WHERE meta_key = 'woo_bought_products'" );
 
 		$statuses = array_map( 'esc_sql', wc_get_is_paid_statuses() );
 
@@ -76,7 +62,7 @@ WHERE p.post_type = 'shop_order'
 			if ( ! array_key_exists( $result->user_id, $user_products ) ) {
 				$user_products[ $result->user_id ] = array();
 			}
-			$user_products[ $result->user_id ][] = $result->product_id;
+			$user_products[ $result->user_id ][] = (string) $result->product_id;
 		}
 
 		foreach ( $user_products as $user_id => $products ) {

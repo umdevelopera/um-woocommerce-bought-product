@@ -1,8 +1,8 @@
-=== Ultimate Member - Bought products ===
+=== WooCommerce Tools ===
 
 Author: umdevelopera
 Author URI: https://github.com/umdevelopera
-Plugin URI: https://github.com/umdevelopera/um-woocommerce-bought-product
+Plugin URI: https://github.com/umdevelopera/um-woocommerce-tools
 Tags: ultimate member, woocommerce, bought products, field, filter
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
@@ -10,12 +10,12 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 Requires at least: 6.5
 Tested up to: 6.7.2
 Requires UM core at least: 2.6.8
-Tested UM core up to: 2.9.2
-Stable tag: 1.2.2
+Tested UM core up to: 2.10.1
+Stable tag: 1.3.0
 
 == Description ==
 
-Adds the "Bought products" field and filter based on WooCommerce orders.
+Adds more features for UM integration with the WooCommerce plugin.
 
 = Key Features =
 
@@ -24,25 +24,31 @@ Adds the "Bought products" field and filter based on WooCommerce orders.
 - Adds a widget used to update information about bought products manually.
 - Automatically updates information about bought products for all users on the plugin activation.
 - Automatically updates information about bought products for a user on the order status change.
-- Supports the High-Performance Order Storage (HPOS) feature since 1.2.0.
+- Allow removing other roles when assign a role on subscription status change.
+
+= Documentation & Support =
+
+This is a free extension created for the community. The Ultimate Member team does not provide support for this extension.
+Open new issue in the GitHub repository if you are facing a problem or have a suggestion: https://github.com/umdevelopera/um-woocommerce-tools/issues
+
+Documentation is the README section in the GitHub repository: https://github.com/umdevelopera/um-woocommerce-tools
 
 == Installation ==
 
 Note: This plugin requires the "Ultimate Member" and "WooCommerce" plugins to be installed first.
 
-You can install this plugin from the ZIP file as any other plugin.
-Download ZIP file from GitHub or Google Drive. You can find download links here: https://github.com/umdevelopera/um-woocommerce-bought-product
+You can install this plugin from the ZIP file as any other plugin. Follow this instruction: https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin
 
-Follow this instruction: https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin
-
-== Documentation & Support ==
-
-This is a free extension created for the community. The Ultimate Member team does not provide support for this extension.
-Open new issue in the GitHub repository if you are facing a problem or have a suggestion: https://github.com/umdevelopera/um-woocommerce-bought-product/issues
-
-Documentation is the README section in the GitHub repository: https://github.com/umdevelopera/um-woocommerce-bought-product
+Download ZIP file from Google Drive. You can find download links here: https://github.com/umdevelopera/um-woocommerce-tools
 
 == Changelog ==
+
+= 1.3.0 =
+
+	- Renamed to "Ultimate Member - WooCommerce Tools"
+	- Added: The "Remove other roles when assign a role on subscription status change" setting.
+	- Added: Clearing old data on activation.
+	- Tweak: product ID value type changed to string.
 
 = 1.2.2: December 7, 2024 =
 

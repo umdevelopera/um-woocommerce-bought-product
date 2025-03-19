@@ -1,18 +1,14 @@
 <?php
-namespace um_ext\um_woocommerce_bought_product\admin;
+namespace um_ext\um_woocommerce_tools\admin;
 
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Class that extends Ultimate Member dashboard.
  *
- * @usage UM()->classes['um_woocommerce_bought_product_dashboard']
- * @usage UM()->Woocommerce_Bought_Product()->dashboard()
+ * Get an instance this way: UM()->Woocommerce_Tools()->admin()->dashboard()
  *
- * @package um_ext\um_woocommerce_bought_product\admin
+ * @package um_ext\um_woocommerce_tools\admin
  * @since 1.1.0
  */
 class Dashboard {
@@ -90,7 +86,7 @@ class Dashboard {
 			$users = get_users( $args );
 
 			if ( empty( $users ) ) {
-				$wcbpu['error'] = __( 'There are no members who match criteria.', 'um-woocommerce-bought-product' );
+				$wcbpu['error'] = __( 'There are no members who match criteria.', 'um-woocommerce-tools' );
 				$wcbpu['state'] = 'error';
 			} else {
 				$wcbpu['role']  = $role;
@@ -103,7 +99,7 @@ class Dashboard {
 			$users = array_slice( $wcbpu['users'], $wcbpu['sent'], $this->users_per_once );
 
 			if ( empty( $users ) ) {
-				$wcbpu['error'] = __( 'Can not get users.', 'um-woocommerce-bought-product' );
+				$wcbpu['error'] = __( 'Can not get users.', 'um-woocommerce-tools' );
 				$wcbpu['state'] = 'error';
 			} else {
 
@@ -121,14 +117,14 @@ class Dashboard {
 				$wcbpu['state'] = $wcbpu['sent'] < $wcbpu['total'] ? 'run' : 'done';
 
 				if ( 'done' === $wcbpu['state'] ) {
-					$wcbpu['success']  = __( 'DONE.', 'um-woocommerce-bought-product' );
+					$wcbpu['success']  = __( 'DONE.', 'um-woocommerce-tools' );
 					$wcbpu['success'] .= PHP_EOL;
-					$wcbpu['success'] .= sprintf( _n( 'Information has been updated for %1$d member.', 'Information has been updated for %1$d members.', $wcbpu['total'], 'um-woocommerce-bought-product' ), $wcbpu['sent'] );
+					$wcbpu['success'] .= sprintf( _n( 'Information has been updated for %1$d member.', 'Information has been updated for %1$d members.', $wcbpu['total'], 'um-woocommerce-tools' ), $wcbpu['sent'] );
 					delete_option( 'um_wcbp_update' );
 				} else {
-					$wcbpu['success']  = __( 'User meta are updating. Progress ', 'um-woocommerce-bought-product' ) . $wcbpu['done'];
+					$wcbpu['success']  = __( 'User meta are updating. Progress ', 'um-woocommerce-tools' ) . $wcbpu['done'];
 					$wcbpu['success'] .= PHP_EOL;
-					$wcbpu['success'] .= sprintf( _n( 'Information has been updated for %1$d of %2$d member.', 'Information has been updated for %1$d of %2$d members.', $wcbpu['total'], 'um-woocommerce-bought-product' ), $wcbpu['sent'], $wcbpu['total'] );
+					$wcbpu['success'] .= sprintf( _n( 'Information has been updated for %1$d of %2$d member.', 'Information has been updated for %1$d of %2$d members.', $wcbpu['total'], 'um-woocommerce-tools' ), $wcbpu['sent'], $wcbpu['total'] );
 					update_option( 'um_wcbp_update', $wcbpu );
 				}
 			}
@@ -142,8 +138,8 @@ class Dashboard {
 	 * Register wp-admin scripts and styles
 	 */
 	public function enqueue_scripts() {
-		wp_register_script( 'um-woocommerce-bought-product-admin', um_woocommerce_bought_product_url . 'assets/js/um-woocommerce-bought-product-admin.js', array( 'jquery', 'wp-hooks' ), um_woocommerce_bought_product_version, false );
-		wp_register_style( 'um-woocommerce-bought-product-admin', um_woocommerce_bought_product_url . 'assets/css/um-woocommerce-bought-product-admin.css', array(), um_woocommerce_bought_product_version );
+		wp_register_script( 'um-woocommerce-tools-admin', um_woocommerce_tools_url . 'assets/js/um-woocommerce-tools-admin.js', array( 'jquery', 'wp-hooks' ), um_woocommerce_tools_version, false );
+		wp_register_style( 'um-woocommerce-tools-admin', um_woocommerce_tools_url . 'assets/css/um-woocommerce-tools-admin.css', array(), um_woocommerce_tools_version );
 	}
 
 
@@ -159,7 +155,7 @@ class Dashboard {
 		$bought_products = array();
 		foreach ( $this->get_products() as $product_id ) {
 			if( wc_customer_bought_product( $user->user_email, $user_id, $product_id ) ) {
-				$bought_products[] = $product_id;
+				$bought_products[] = (string) $product_id;
 			}
 		}
 
@@ -209,7 +205,7 @@ class Dashboard {
 	 * Load metabox
 	 */
 	public function load_metabox() {
-		add_meta_box( 'um-metaboxes-wcbp', __( 'Bought products', 'um-woocommerce-bought-product' ), array( &$this, 'metabox_content' ), 'toplevel_page_ultimatemember', 'normal', 'default' );
+		add_meta_box( 'um-metaboxes-wcbp', __( 'Bought products', 'um-woocommerce-tools' ), array( &$this, 'metabox_content' ), 'toplevel_page_ultimatemember', 'normal', 'default' );
 	}
 
 
@@ -217,7 +213,7 @@ class Dashboard {
 	 * Render metabox
 	 */
 	public function metabox_content() {
-		$template = wp_normalize_path( um_woocommerce_bought_product_path . 'includes/admin/templates/dashboard.php' );
+		$template = wp_normalize_path( um_woocommerce_tools_path . 'includes/admin/templates/dashboard.php' );
 		if ( file_exists( $template ) ) {
 			$wcbpu = get_option( 'um_wcbp_update' );
 			if ( empty( $wcbpu ) ) {
