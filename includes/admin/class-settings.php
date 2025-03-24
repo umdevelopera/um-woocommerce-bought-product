@@ -32,7 +32,7 @@ class Settings {
 				'id'        => 'woo_subscription_remove_roles',
 				'type'      => 'select',
 				'size'      => 'small',
-				'label'     => __( 'Remove other roles when assign a role on subscription status change', 'um-woocommerce-tools' ),
+				'label'     => __( 'Remove other roles when assign a role on subscription status change or switching a subscription.', 'um-woocommerce-tools' ),
 				'description'   => __( 'Keep only the assigned role if Yes. Keep all roles but make the assigned role first if No.', 'um-woocommerce-tools' ),
 				'options'   => array(
 					0 => __( 'No', 'um-woocommerce-tools' ),

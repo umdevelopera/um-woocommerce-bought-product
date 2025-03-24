@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Ultimate Member - WooCommerce (bought product)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-30 12:22+0000\n"
-"PO-Revision-Date: 2024-12-07 19:59+0000\n"
+"PO-Revision-Date: 2025-03-27 11:49+0000\n"
 "Last-Translator: Denis Baran\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -16,29 +16,28 @@ msgstr ""
 "X-Domain: um-woocommerce-bought-product"
 
 #. Description of the plugin
-msgid ""
-"Adds the \"Bought products\" field and filter based on WooCommerce orders"
+msgid "Adds more features for UM integration with the WooCommerce plugin."
 msgstr ""
 
-#: includes/admin/class-dashboard.php:212 includes/core/class-fields.php:69
-#: includes/core/class-fields.php:70
-#: includes/core/class-member-directory.php:92
+#: includes/admin/class-dashboard.php:208 includes/core/class-fields.php:61
+#: includes/core/class-fields.php:62
+#: includes/core/class-member-directory.php:81
 msgid "Bought products"
 msgstr ""
 
-#: includes/admin/class-dashboard.php:106
+#: includes/admin/class-dashboard.php:102
 msgid "Can not get users."
 msgstr ""
 
-#: includes/admin/templates/dashboard.php:56
+#: includes/admin/templates/tmpl/wcbp-progress.php:22
 msgid "Cancel"
 msgstr ""
 
-#: includes/admin/templates/dashboard.php:15
+#: includes/admin/templates/dashboard.php:13
 msgid "Create or update bought products usermeta"
 msgstr ""
 
-#: includes/admin/class-dashboard.php:124
+#: includes/admin/class-dashboard.php:120
 msgid "DONE."
 msgstr ""
 
@@ -47,37 +46,53 @@ msgid "https://github.com/umdevelopera"
 msgstr ""
 
 #. URI of the plugin
-msgid "https://github.com/umdevelopera/um-woocommerce-bought-product"
+msgid "https://github.com/umdevelopera/um-woocommerce-tools"
 msgstr ""
 
-#: includes/admin/class-dashboard.php:126
+#: includes/admin/class-dashboard.php:122
 #, php-format
 msgid "Information has been updated for %1$d member."
 msgid_plural "Information has been updated for %1$d members."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/class-dashboard.php:131
+#: includes/admin/class-dashboard.php:127
 #, php-format
 msgid "Information has been updated for %1$d of %2$d member."
 msgid_plural "Information has been updated for %1$d of %2$d members."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/templates/dashboard.php:53
+#: includes/admin/class-settings.php:36
+msgid ""
+"Keep only the assigned role if Yes. Keep all roles but make the assigned "
+"role first if No."
+msgstr ""
+
+#: includes/admin/class-settings.php:38
+msgid "No"
+msgstr ""
+
+#: includes/admin/templates/tmpl/wcbp-progress.php:19
 msgid "Pause"
 msgstr ""
 
-#: includes/admin/templates/dashboard.php:50
+#: includes/admin/class-settings.php:35
+msgid ""
+"Remove other roles when assign a role on subscription status change or "
+"switching a subscription."
+msgstr ""
+
+#: includes/admin/templates/tmpl/wcbp-progress.php:16
 msgid "Run"
 msgstr ""
 
-#: includes/admin/templates/dashboard.php:26
+#: includes/admin/templates/dashboard.php:24
 msgid "Start"
 msgstr ""
 
 #. %s - plugin name.
-#: um-woocommerce-bought-product.php:60
+#: um-woocommerce-tools.php:58
 #, php-format
 msgid ""
 "The <strong>%s</strong> extension requires the Ultimate Member plugin to be "
@@ -86,7 +101,7 @@ msgid ""
 msgstr ""
 
 #. %s - plugin name.
-#: um-woocommerce-bought-product.php:69
+#: um-woocommerce-tools.php:67
 #, php-format
 msgid ""
 "The <strong>%s</strong> extension requires WooCommerce plugin to be "
@@ -94,28 +109,32 @@ msgid ""
 "org/plugins/woocommerce/\">here</a>"
 msgstr ""
 
-#: includes/admin/class-dashboard.php:93
+#: includes/admin/class-dashboard.php:89
 msgid "There are no members who match criteria."
 msgstr ""
 
-#: includes/admin/templates/dashboard.php:16
+#: includes/admin/templates/dashboard.php:14
 msgid ""
 "This tool updates information about purchased products for members with "
 "selected role(s)."
 msgstr ""
 
 #. Name of the plugin
-msgid "Ultimate Member - Bought products"
+msgid "Ultimate Member - WooCommerce Tools"
 msgstr ""
 
 #. Author of the plugin
 msgid "umdevelopera"
 msgstr ""
 
-#: includes/admin/class-dashboard.php:129
+#: includes/admin/class-dashboard.php:125
 msgid "User meta are updating. Progress "
 msgstr ""
 
-#: includes/admin/templates/dashboard.php:20
+#: includes/admin/class-settings.php:39
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/templates/dashboard.php:18
 msgid "~All Roles~"
 msgstr ""

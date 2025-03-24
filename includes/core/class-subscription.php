@@ -19,9 +19,16 @@ class Subscription {
 	 * Class constructor.
 	 */
 	public function __construct() {
+
+		// Role detection.
 		add_action( 'woocommerce_subscription_status_changed', array( $this, 'enable_new_role_detection' ), 8 );
 		add_action( 'woocommerce_subscription_status_changed', array( $this, 'disable_new_role_detection' ), 12 );
-		add_action( 'woocommerce_subscription_status_changed', array( $this, 'remove_old_roles' ), 20, 4 );
+		add_action( 'woocommerce_subscriptions_switch_completed', array( $this, 'enable_new_role_detection' ), 8 );
+		add_action( 'woocommerce_subscriptions_switch_completed', array( $this, 'disable_new_role_detection' ), 12 );
+
+		// Maybe remove roles.
+		add_action( 'woocommerce_subscription_status_changed', array( $this, 'remove_roles_on_status_changed' ), 20, 4 );
+		add_action( 'woocommerce_subscriptions_switch_completed', array( $this, 'remove_roles_on_switch' ), 20, 1 );
 	}
 
 	/**
@@ -86,7 +93,7 @@ class Subscription {
 	}
 
 	/**
-	 * Maybe remove old roles.
+	 * Maybe remove old roles on subscription status changes.
 	 *
 	 * Hook: woocommerce_subscription_status_changed - 20
 	 *
@@ -96,7 +103,7 @@ class Subscription {
 	 * @param \WC_Subscription $subscription    Subscription object.
 	 * @return bool
 	 */
-	public function remove_old_roles( $subscription_id, $old_status, $new_status, $subscription ) {
+	public function remove_roles_on_status_changed( $subscription_id, $old_status, $new_status, $subscription ) {
 		$user  = $subscription->get_user();
 		$roles = $user->roles;
 
@@ -117,7 +124,35 @@ class Subscription {
 		}
 
 		if ( ! empty( $this->assigned_role ) ) {
-			if( UM()->options()->get( 'woo_subscription_remove_roles' ) ){
+			if ( UM()->options()->get( 'woo_subscription_remove_roles' ) ) {
+				$user->set_role( $this->assigned_role );
+			} else {
+				$this->make_user_role_primary( $user, $this->assigned_role );
+			}
+
+			// forcefully flush the cache.
+			UM()->user()->remove_cache( $user_id );
+		}
+	}
+
+	/**
+	 * Maybe remove old roles on subscription switches.
+	 *
+	 * Hook: woocommerce_subscriptions_switch_completed - 20
+	 *
+	 * @param \WC_Order $order Order.
+	 */
+	public function remove_roles_on_switch( $order ) {
+		$user  = $order->get_user();
+		$roles = $user->roles;
+
+		if ( 2 > count( $roles ) ) {
+			return;
+		}
+
+		$user_id = $order->get_user_id();
+		if ( ! empty( $this->assigned_role ) ) {
+			if ( UM()->options()->get( 'woo_subscription_remove_roles' ) ) {
 				$user->set_role( $this->assigned_role );
 			} else {
 				$this->make_user_role_primary( $user, $this->assigned_role );

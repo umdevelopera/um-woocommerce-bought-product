@@ -12,6 +12,7 @@ Adds more features for UM integration with the WooCommerce plugin.
 - Automatically updates information about bought products for a user on the order status change.
 2. Subscriptions
 - Allow removing other roles when assign a role on subscription status change.
+- Allow removing other roles when assign a role on subscription switch.
 
 ## Installation
 
@@ -27,7 +28,7 @@ Once the plugin is cloned, enter your site admin dashboard and go to _wp-admin >
 
 ### How to install from ZIP archive
 
-You can install the plugin from this [ZIP file](https://drive.google.com/file/d/1KSuR9TA-ZoQY6H-aOStzX1qo1eY4xcBK/view) as any other plugin. Follow [this instruction](https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin).
+You can install the plugin from this [ZIP file](https://drive.google.com/file/d/1we61ONGTS9ZQJScKj_DSyCG3Ia_LNhWy/view) as any other plugin. Follow [this instruction](https://wordpress.org/support/article/managing-plugins/#upload-via-wordpress-admin).
 
 ## How to use
 

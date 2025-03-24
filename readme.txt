@@ -11,7 +11,7 @@ Requires at least: 6.5
 Tested up to: 6.7.2
 Requires UM core at least: 2.6.8
 Tested UM core up to: 2.10.1
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 
 == Description ==
 
@@ -43,7 +43,11 @@ Download ZIP file from Google Drive. You can find download links here: https://g
 
 == Changelog ==
 
-= 1.3.0 =
+= 1.3.1: March 27 =
+
+	- Tweak: Remove other roles when assign a role on subscription switch.
+
+= 1.3.0: March 24 =
 
 	- Renamed to "Ultimate Member - WooCommerce Tools"
 	- Added: The "Remove other roles when assign a role on subscription status change" setting.
